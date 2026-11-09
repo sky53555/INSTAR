@@ -1,107 +1,38 @@
 ---
-layout: null
+layout: studio
+title: 인스타 콘텐츠 작업실
 ---
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="우당탕 라이프와 move.a.bit의 그림 시안, 컷 강조선, 인스타그램 콘텐츠 기획">
-  <title>모아 · 인스타 콘텐츠 작업실</title>
-  <link rel="stylesheet" href="./pages.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="./"><strong>모아</strong><span>인스타 콘텐츠 작업실</span></a>
-      <nav aria-label="작업실 메뉴">
-        <a href="#references">그림 시안</a>
-        <a href="#effects">컷 강조선</a>
-        <a href="#plan">기획표</a>
-      </nav>
+<section class="hero home-hero">
+  <div>
+    <p class="eyebrow">인스타 콘텐츠 작업실</p>
+    <h1>두 계정, 각자의 작업실</h1>
+    <p>계정을 선택하면 그 계정의 대본, 그림, 콘텐츠 기획을 볼 수 있어요.</p>
+  </div>
+</section>
+
+<div class="account-grid" id="references">
+  <article class="account-card">
+    <a class="account-art preview" href="./udangtang.html" aria-label="우당탕 라이프 작업실 열기">
+      <img src="./assets/references/character-poses.jpg" alt="안경 캐릭터 포즈 시트">
+    </a>
+    <div class="card-body">
+      <p class="eyebrow">일상 인스타툰</p>
+      <h2><a class="account-name" href="./udangtang.html">우당탕 라이프</a></h2>
+      <p>컷별 대본, 캐릭터 포즈, 그림 위에 얹는 강조선.</p>
+      <a class="button" href="./udangtang.html#scripts">인스타툰 스크립트 보기</a>
+      <div class="downloads" id="effects"><a href="./udangtang.html#references">그림 시안</a><a href="./udangtang.html#effects">컷 강조선</a><a href="./udangtang.html#plan">기획표</a></div>
     </div>
-  </header>
-
-  <main class="wrap">
-    <section class="hero" aria-labelledby="title">
-      <div>
-        <p class="eyebrow">우당탕 라이프 · move.a.bit</p>
-        <h1 id="title">인스타 콘텐츠 작업실</h1>
-        <p>기존 그림을 참고하고, 컷에 쓸 강조선을 내려받고, 다음에 올릴 콘텐츠를 확인할 수 있어요.</p>
-        <a class="button" href="#references">그림 시안 보기</a>
-      </div>
-      <aside class="next">
-        <p class="eyebrow">move.a.bit · 다음 릴스</p>
-        <h2>왜 이렇게 어깨 아픈 사람이 많을까요?</h2>
-        <p>어깨를 공부하게 된 이야기부터 시작해요.</p>
-        <a href="#move-a-bit">촬영 기획 보기 →</a>
-      </aside>
-    </section>
-
-    <section id="references" class="section">
-      <p class="eyebrow">01 · 기존 시안</p>
-      <h2>그림 참고 자료</h2>
-      <p>이미지를 누르면 크게 볼 수 있어요. 그리면서 옆에 띄워두거나 JPG로 저장하세요.</p>
-
-      <h3>우당탕 라이프</h3>
-      <div class="gallery">
-        {% assign drawings = "character-poses|캐릭터 포즈 시트|머리 부여잡기, 마이크 소개, 춤, 허리 숙여 인사;four-scenes|네 장면 만화|명상, 소개, 춤, 작별 인사를 한 장에;meditation|명상 중 폭발하는 마음|평온한 몸과 폭발하는 머릿속의 대비;pose-bible|툰 포즈 바이블|표정과 자세 모음, 하단에 기존 효과선과 기호 예시" | split: ";" %}
-        {% for item in drawings %}
-          {% assign row = item | split: "|" %}
-          {% include reference-card.html %}
-        {% endfor %}
-      </div>
-
-      <h3>move.a.bit</h3>
-      <div class="gallery">
-        {% assign logos = "cream-logo|크림색 원형 로고|원형 배지 스타일;wave-logo|블루 웨이브 로고|짙은 배경과 파란 웨이브" | split: ";" %}
-        {% for item in logos %}
-          {% assign row = item | split: "|" %}
-          {% include reference-card.html %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="effects" class="section">
-      <p class="eyebrow">02 · 재사용 소재</p>
-      <h2>전체 컷 강조선</h2>
-      <p>가운데가 투명한 1080 × 1350 PNG예요. 그림 위에 올리고 컷 크기에 맞춰 늘리면 돼요. 밝은 컷에는 검정, 어두운 컷에는 흰색을 골라보세요.</p>
-      <div class="gallery effects">
-        {% assign effects = "focus-light|가벼운 집중선|표정이나 대사에 살짝 주목;focus-impact|강한 방사형 집중선|반전이나 크게 놀라는 순간;corner-burst|네 모서리 강조선|컷 가장자리에서 시선을 모을 때;speed-horizontal|가로 속도선|가로 방향으로 빠르게 움직일 때;speed-vertical|세로 속도선|떨어지거나 급히 올라갈 때;pressure|위에서 쏟아지는 선|긴장하거나 압박받는 느낌;diagonal-impact|대각선 충격선|컷에 방향감이나 충격을 줄 때;frame-tremor|테두리 잔떨림|당황하거나 분위기가 술렁일 때" | split: ";" %}
-        {% for item in effects %}
-          {% assign row = item | split: "|" %}
-          {% assign asset = row[0] | prepend: "./assets/effects/" %}
-          <article class="card">
-            <a class="preview effect-preview" href="{{ asset }}.png" target="_blank" rel="noopener" aria-label="{{ row[1] }} 크게 보기"><img src="{{ asset }}.png" alt="{{ row[1] }}" loading="lazy"></a>
-            <div class="card-body">
-              <h3>{{ row[1] }}</h3><p>{{ row[2] }}</p>
-              <div class="downloads">
-                <a href="{{ asset }}.png" download>검정 PNG ↓</a>
-                <a href="{{ asset }}-white.png" download>흰색 PNG ↓</a>
-              </div>
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="plan" class="section plan">
-      <p class="eyebrow">03 · 게시물 기획</p>
-      <h2>계정별 콘텐츠 기획표</h2>
-      <div class="downloads"><a href="#life-plan">우당탕 라이프</a><a href="#move-a-bit">move.a.bit</a></div>
-      {% capture content_plan %}{% include_relative CONTENT-PLAN.md %}{% endcapture %}
-      {% assign plan_sections = content_plan | split: "## move.a.bit" %}
-      {% assign life_plan = plan_sections[0] | split: "## 우당탕 라이프" | last %}
-      <details id="life-plan" open>
-        <summary>우당탕 라이프</summary>
-        <div class="plan-body">{{ life_plan | markdownify }}</div>
-      </details>
-      <details id="move-a-bit" open>
-        <summary>move.a.bit</summary>
-        <div class="plan-body">{{ plan_sections[1] | markdownify }}</div>
-      </details>
-    </section>
-  </main>
-  <footer class="wrap">모아 · 인스타 콘텐츠 작업실</footer>
-</body>
-</html>
+  </article>
+  <article class="account-card">
+    <a class="account-art preview" href="./move-a-bit.html" aria-label="무브어빗 작업실 열기">
+      <img src="./assets/references/wave-logo.jpg" alt="move.a.bit 블루 웨이브 로고">
+    </a>
+    <div class="card-body">
+      <p class="eyebrow">필라테스 · 움직임</p>
+      <h2><a class="account-name" href="./move-a-bit.html">무브어빗 <small>move.a.bit</small></a></h2>
+      <p>어깨 릴스 대본, 브랜드 로고, 필라테스 콘텐츠 기획.</p>
+      <a class="button" href="./move-a-bit.html#scripts">릴스 스크립트 보기</a>
+      <div class="downloads" id="plan"><a href="./move-a-bit.html#references">로고 시안</a><a href="./move-a-bit.html#plan">기획표</a></div>
+    </div>
+  </article>
+</div>

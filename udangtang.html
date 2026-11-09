@@ -1,0 +1,74 @@
+---
+layout: studio
+title: 우당탕 라이프
+account: life
+---
+<section class="hero home-hero">
+  <div>
+    <p class="eyebrow">일상 인스타툰</p>
+    <h1>우당탕 라이프</h1>
+    <p>컷별 대본을 보면서 캐릭터와 강조선을 골라 쓸 수 있어요.</p>
+    <div class="downloads"><a href="#scripts">스크립트</a><a href="#references">그림 시안</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
+  </div>
+</section>
+
+<section id="scripts" class="section">
+  <p class="eyebrow">01 · 기존 대본</p>
+  <h2>인스타툰 스크립트</h2>
+  <article class="script-card">
+    <h3>우당탕 라이프 콘텐츠 스크립트 모음</h3>
+    <ul class="script-list">
+      <li><strong>또 퇴사합니다</strong><span>명상 장면과 7컷 초안</span></li>
+      <li><strong>내 영혼의 소울푸드, 떡볶이</strong><span>7컷 구성과 대사</span></li>
+      <li><strong>출퇴근, 돌이 되어버렸다</strong><span>8컷 구성</span></li>
+      <li><strong>도통 모르겠다 · 인생은 ING</strong><span>생각 노트 컷별 초안</span></li>
+      <li><strong>직업 찍먹 리뷰 · 사서 편</strong><span>채워 넣을 항목이 있는 6컷 틀</span></li>
+    </ul>
+    <a class="button" href="https://docs.google.com/document/d/1XqEgtqzwokjkFYTX8NNoLUxR7BORYcnBMvPr6VZ6iLU/edit?usp=drivesdk" target="_blank" rel="noopener">Google Docs에서 전체 대본 열기 ↗</a>
+  </article>
+</section>
+
+<section id="references" class="section">
+  <p class="eyebrow">02 · 기존 시안</p>
+  <h2>캐릭터 그림 참고 자료</h2>
+  <p>이미지를 누르면 크게 볼 수 있어요. 그림을 그릴 때 옆에 띄워두거나 JPG로 저장하세요.</p>
+      <div class="gallery">
+        {% assign drawings = "character-poses|캐릭터 포즈 시트|머리 부여잡기, 마이크 소개, 춤, 허리 숙여 인사;four-scenes|네 장면 만화|명상, 소개, 춤, 작별 인사를 한 장에;meditation|명상 중 폭발하는 마음|평온한 몸과 폭발하는 머릿속의 대비;pose-bible|툰 포즈 바이블|표정과 자세 모음, 하단에 기존 효과선과 기호 예시" | split: ";" %}
+        {% for item in drawings %}
+          {% assign row = item | split: "|" %}
+          {% include reference-card.html %}
+        {% endfor %}
+      </div>
+</section>
+
+<section id="effects" class="section">
+      <p class="eyebrow">03 · 재사용 소재</p>
+      <h2>전체 컷 강조선</h2>
+      <p>가운데가 투명한 1080 × 1350 PNG예요. 그림 위에 올리고 컷 크기에 맞춰 늘리면 돼요. 밝은 컷에는 검정, 어두운 컷에는 흰색을 골라보세요.</p>
+      <div class="gallery effects">
+        {% assign effects = "focus-light|가벼운 집중선|표정이나 대사에 살짝 주목;focus-impact|강한 방사형 집중선|반전이나 크게 놀라는 순간;corner-burst|네 모서리 강조선|컷 가장자리에서 시선을 모을 때;speed-horizontal|가로 속도선|가로 방향으로 빠르게 움직일 때;speed-vertical|세로 속도선|떨어지거나 급히 올라갈 때;pressure|위에서 쏟아지는 선|긴장하거나 압박받는 느낌;diagonal-impact|대각선 충격선|컷에 방향감이나 충격을 줄 때;frame-tremor|테두리 잔떨림|당황하거나 분위기가 술렁일 때" | split: ";" %}
+        {% for item in effects %}
+          {% assign row = item | split: "|" %}
+          {% assign asset = row[0] | prepend: "./assets/effects/" %}
+          <article class="card">
+            <a class="preview effect-preview" href="{{ asset }}.png" target="_blank" rel="noopener" aria-label="{{ row[1] }} 크게 보기"><img src="{{ asset }}.png" alt="{{ row[1] }}" loading="lazy"></a>
+            <div class="card-body">
+              <h3>{{ row[1] }}</h3><p>{{ row[2] }}</p>
+              <div class="downloads">
+                <a href="{{ asset }}.png" download>검정 PNG ↓</a>
+                <a href="{{ asset }}-white.png" download>흰색 PNG ↓</a>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+<section id="plan" class="section plan">
+  <p class="eyebrow">04 · 게시물 기획</p>
+  <h2>우당탕 라이프 기획표</h2>
+      {% capture content_plan %}{% include_relative CONTENT-PLAN.md %}{% endcapture %}
+      {% assign plan_sections = content_plan | split: "## move.a.bit" %}
+      {% assign life_plan = plan_sections[0] | split: "## 우당탕 라이프" | last %}
+  <div class="plan-body">{{ life_plan | markdownify }}</div>
+</section>

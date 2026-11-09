@@ -71,3 +71,21 @@ footer { color: var(--muted); font-size: 13px; padding-block: 32px; }
   .plan-body { padding-inline: 9px; font-size: 14px; }
   .plan-body th, .plan-body td { padding: 4px; }
 }
+
+nav a[aria-current="page"] { background: #e4eee8; }
+.home-hero { grid-template-columns: 1fr; }
+.account-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.account-card, .script-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.account-card .card-body { padding: 18px; }
+.account-art img { height: clamp(170px, 26vw, 260px); }
+.account-name { color: inherit; text-decoration: none; }
+.account-name small { display: inline-block; color: var(--muted); font-size: .55em; }
+.script-card { padding: clamp(16px, 3vw, 28px); margin-top: 12px; }
+.script-list { list-style: none; padding: 0; margin: 9px 0 0; }
+.script-list li { display: flex; justify-content: space-between; gap: 4px 14px; flex-wrap: wrap; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.script-list span { color: var(--muted); }
+.plan > .plan-body { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-top: 12px; }
+@media (max-width: 630px) {
+  .account-grid { grid-template-columns: 1fr; }
+  .script-list li { flex-direction: column; }
+}

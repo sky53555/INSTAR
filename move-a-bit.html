@@ -1,0 +1,53 @@
+---
+layout: studio
+title: 무브어빗
+account: move
+---
+<section class="hero">
+  <div>
+    <p class="eyebrow">move.a.bit · 필라테스와 움직임</p>
+    <h1>무브어빗</h1>
+    <p>어깨 릴스 대본과 필라테스 콘텐츠를 준비하는 공간이에요.</p>
+    <div class="downloads"><a href="#scripts">스크립트</a><a href="#references">로고 시안</a><a href="#plan">기획표</a></div>
+  </div>
+  <aside class="next">
+    <p class="eyebrow">다음 릴스 · 첫 멘트</p>
+    <h2>왜 이렇게 어깨 아픈 사람이 많을까요?</h2>
+    <a href="#scripts">기존 어깨 대본 보기 →</a>
+  </aside>
+</section>
+
+<section id="scripts" class="section">
+  <p class="eyebrow">01 · 기존 대본</p>
+  <h2>릴스 스크립트</h2>
+  <article class="script-card">
+    <h3>어깨 해부학 릴스 스크립트</h3>
+    <ul class="script-list">
+      <li><strong>어깨는 왜 아플까요?</strong><span>어깨 경험과 첫 수업을 담은 촬영용 초안</span></li>
+      <li><strong>전거근, 무슨 일을 할까?</strong><span>전거근 후속편 촬영용 초안</span></li>
+      <li><strong>어깨의 뼈·견갑대·근육·움직임</strong><span>해부학 릴스 구성과 화면 메모</span></li>
+    </ul>
+    <a class="button" href="https://docs.google.com/document/d/1uF7wEaPeNgUeF9Q7CD7GbUm5nzRL1VHhqBVjFWvDESI/edit?usp=drivesdk" target="_blank" rel="noopener">Google Docs에서 전체 대본 열기 ↗</a>
+  </article>
+</section>
+
+<section id="references" class="section">
+  <p class="eyebrow">02 · 기존 시안</p>
+  <h2>무브어빗 로고</h2>
+  <p>이미지를 눌러 크게 보거나 JPG로 다운로드하세요.</p>
+      <div class="gallery">
+        {% assign logos = "cream-logo|크림색 원형 로고|원형 배지 스타일;wave-logo|블루 웨이브 로고|짙은 배경과 파란 웨이브" | split: ";" %}
+        {% for item in logos %}
+          {% assign row = item | split: "|" %}
+          {% include reference-card.html %}
+        {% endfor %}
+      </div>
+</section>
+
+<section id="plan" class="section plan">
+  <p class="eyebrow">03 · 게시물 기획</p>
+  <h2>무브어빗 기획표</h2>
+      {% capture content_plan %}{% include_relative CONTENT-PLAN.md %}{% endcapture %}
+      {% assign plan_sections = content_plan | split: "## move.a.bit" %}
+  <div class="plan-body">{{ plan_sections[1] | markdownify }}</div>
+</section>
