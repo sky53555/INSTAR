@@ -1,0 +1,23 @@
+<section id="toolkit" class="section">
+  <p class="eyebrow">03 · 컷에 얹는 소재</p>
+  <h2>인스타툰 제작 라이브러리</h2>
+  <p>기존 포즈에서 골라 뽑은 캐릭터와 새로 만든 말풍선, 소품, 배경을 따로 저장할 수 있어요.</p>
+  <a class="button" href="./assets/toolkit/udangtang-toolkit.zip" download>투명 PNG 40개 한 번에 받기 ↓</a>
+  {% for group in site.data.comic_toolkit %}
+  <details class="toolkit-group"{% if forloop.first %} open{% endif %}>
+    <summary>{{ group.name }} <span class="tag-note">{{ group.cards.size }}개</span></summary>
+    <div class="gallery toolkit-gallery">
+      {% for card in group.cards %}
+      {% assign asset = card.file | prepend: "./assets/toolkit/" %}
+      <article class="card">
+        <a class="preview effect-preview" href="{{ asset }}" target="_blank" rel="noopener" aria-label="{{ card.title }} 크게 보기"><img src="{{ asset }}" alt="{{ card.title }}" loading="lazy" width="560" height="560"></a>
+        <div class="card-body">
+          <h3>{{ card.title }}</h3><p>{{ card.hint }}</p>
+          <div class="downloads"><a href="{{ asset }}" download>투명 PNG ↓</a></div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </details>
+  {% endfor %}
+</section>

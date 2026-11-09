@@ -8,24 +8,15 @@ account: life
     <p class="eyebrow">일상 인스타툰</p>
     <h1>우당탕 라이프</h1>
     <p>컷별 대본을 보면서 캐릭터와 강조선을 골라 쓸 수 있어요.</p>
-    <div class="downloads"><a href="#scripts">스크립트</a><a href="#references">그림 시안</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
+    <div class="downloads"><a href="#scripts">스크립트</a><a href="#resignation">퇴사편 바로 보기</a><a href="#circle-square">새 만화 · 동그라미</a><a href="#references">그림 시안</a><a href="#toolkit">제작 소재</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
   </div>
 </section>
 
 <section id="scripts" class="section">
   <p class="eyebrow">01 · 기존 대본</p>
   <h2>인스타툰 스크립트</h2>
-  <article class="script-card">
-    <h3>우당탕 라이프 콘텐츠 스크립트 모음</h3>
-    <ul class="script-list">
-      <li><strong>또 퇴사합니다</strong><span>명상 장면과 7컷 초안</span></li>
-      <li><strong>내 영혼의 소울푸드, 떡볶이</strong><span>7컷 구성과 대사</span></li>
-      <li><strong>출퇴근, 돌이 되어버렸다</strong><span>8컷 구성</span></li>
-      <li><strong>도통 모르겠다 · 인생은 ING</strong><span>생각 노트 컷별 초안</span></li>
-      <li><strong>직업 찍먹 리뷰 · 사서 편</strong><span>채워 넣을 항목이 있는 6컷 틀</span></li>
-    </ul>
-    <a class="button" href="https://docs.google.com/document/d/1XqEgtqzwokjkFYTX8NNoLUxR7BORYcnBMvPr6VZ6iLU/edit?usp=drivesdk" target="_blank" rel="noopener">Google Docs에서 전체 대본 열기 ↗</a>
-  </article>
+  {% include life-scripts.html %}
+  <div class="downloads"><a href="https://docs.google.com/document/d/1XqEgtqzwokjkFYTX8NNoLUxR7BORYcnBMvPr6VZ6iLU/edit?usp=drivesdk" target="_blank" rel="noopener">기존 Google Docs 자료 열기 ↗</a></div>
 </section>
 
 <section id="references" class="section">
@@ -33,7 +24,7 @@ account: life
   <h2>캐릭터 그림 참고 자료</h2>
   <p>이미지를 누르면 크게 볼 수 있어요. 그림을 그릴 때 옆에 띄워두거나 JPG로 저장하세요.</p>
       <div class="gallery">
-        {% assign drawings = "character-poses|캐릭터 포즈 시트|머리 부여잡기, 마이크 소개, 춤, 허리 숙여 인사;four-scenes|네 장면 만화|명상, 소개, 춤, 작별 인사를 한 장에;meditation|명상 중 폭발하는 마음|평온한 몸과 폭발하는 머릿속의 대비;pose-bible|툰 포즈 바이블|표정과 자세 모음, 하단에 기존 효과선과 기호 예시" | split: ";" %}
+        {% assign drawings = "character-poses|캐릭터 포즈 시트|머리 부여잡기, 마이크 소개, 춤, 허리 숙여 인사;four-scenes|네 장면 만화|명상, 소개, 춤, 작별 인사를 한 장에;meditation|명상 중 폭발하는 마음|평온한 몸과 폭발하는 머릿속의 대비;pose-bible|툰 포즈 바이블|표정과 자세 모음, 하단에 기존 효과선과 기호 예시;expressions|캐릭터 표정·동작 사전|얼굴, 전신, 손과 반응의 기존 참고 시안;pose-sheet|마이크·춤·인사 시트|기존 안경 캐릭터의 동작 모음;storyboard-study|표정과 컷 연출 참고|폭발 장면과 표정 연구;resignation-storyboard|퇴사편 기존 콘티 시안|구도 참고용 기존 그림" | split: ";" %}
         {% for item in drawings %}
           {% assign row = item | split: "|" %}
           {% include reference-card.html %}
@@ -41,8 +32,10 @@ account: life
       </div>
 </section>
 
+{% include comic-toolkit.html %}
+
 <section id="effects" class="section">
-      <p class="eyebrow">03 · 재사용 소재</p>
+      <p class="eyebrow">04 · 재사용 소재</p>
       <h2>전체 컷 강조선</h2>
       <p>가운데가 투명한 1080 × 1350 PNG예요. 그림 위에 올리고 컷 크기에 맞춰 늘리면 돼요. 밝은 컷에는 검정, 어두운 컷에는 흰색을 골라보세요.</p>
       <div class="gallery effects">
@@ -65,7 +58,7 @@ account: life
     </section>
 
 <section id="plan" class="section plan">
-  <p class="eyebrow">04 · 게시물 기획</p>
+  <p class="eyebrow">05 · 게시물 기획</p>
   <h2>우당탕 라이프 기획표</h2>
       {% capture content_plan %}{% include_relative CONTENT-PLAN.md %}{% endcapture %}
       {% assign plan_sections = content_plan | split: "## move.a.bit" %}

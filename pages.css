@@ -89,3 +89,17 @@ nav a[aria-current="page"] { background: #e4eee8; }
   .account-grid { grid-template-columns: 1fr; }
   .script-list li { flex-direction: column; }
 }
+
+.episode-body { padding: 0 18px 15px; }
+.episode-body p { margin-block: 5px 10px; }
+.tag-note { display: inline-block; font-size: 12px; font-weight: 700; background: #e4eee8; color: var(--accent); padding: 3px 8px; border-radius: 12px; margin-inline-start: 4px; }
+.cut-list { margin: 0; padding-left: 22px; }
+.cut-list li { margin-block: 6px; padding-left: 3px; }
+.script-note { margin-block: 10px; }
+.toolkit-group { margin-top: 14px; }
+.toolkit-gallery { padding: 0 12px 12px; margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
+.toolkit-gallery .preview img { height: 140px; }
+@media (max-width: 450px) {
+  .toolkit-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .toolkit-gallery .preview img { height: 112px; }
+}

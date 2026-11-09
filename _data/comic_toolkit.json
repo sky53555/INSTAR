@@ -1,0 +1,232 @@
+[
+  {
+    "name": "캐릭터 포즈 · 투명 컷아웃",
+    "cards": [
+      {
+        "file": "pose-mic.png",
+        "title": "마이크 들고 말하기",
+        "hint": "소개 컷"
+      },
+      {
+        "file": "pose-greet.png",
+        "title": "손 내밀며 소개",
+        "hint": "인사와 등장"
+      },
+      {
+        "file": "pose-celebrate.png",
+        "title": "한 손 번쩍",
+        "hint": "기쁜 순간"
+      },
+      {
+        "file": "pose-groove.png",
+        "title": "작게 그루브 타기",
+        "hint": "반복 컷과 리듬"
+      },
+      {
+        "file": "pose-point.png",
+        "title": "옆을 가리키기",
+        "hint": "시선 연결"
+      },
+      {
+        "file": "pose-shrug.png",
+        "title": "어깨 으쓱",
+        "hint": "체념이나 어리둥절"
+      },
+      {
+        "file": "pose-sigh.png",
+        "title": "한숨과 손짓",
+        "hint": "답답함"
+      },
+      {
+        "file": "pose-bow.png",
+        "title": "허리 숙여 인사",
+        "hint": "마지막 컷"
+      }
+    ]
+  },
+  {
+    "name": "말풍선 · 내레이션",
+    "cards": [
+      {
+        "file": "bubble-talk.png",
+        "title": "기본 대화",
+        "hint": "짧은 대사"
+      },
+      {
+        "file": "bubble-thought.png",
+        "title": "생각 구름",
+        "hint": "속마음 독백"
+      },
+      {
+        "file": "bubble-shout.png",
+        "title": "외침 말풍선",
+        "hint": "폭발하는 한마디"
+      },
+      {
+        "file": "bubble-whisper.png",
+        "title": "속삭임 말풍선",
+        "hint": "작게 말하는 대사"
+      },
+      {
+        "file": "bubble-narration.png",
+        "title": "내레이션 박스",
+        "hint": "시간·장소 설명"
+      },
+      {
+        "file": "bubble-panel.png",
+        "title": "빈 컷 프레임",
+        "hint": "손그림 테두리"
+      }
+    ]
+  },
+  {
+    "name": "감정 기호 · 움직임",
+    "cards": [
+      {
+        "file": "mark-sweat.png",
+        "title": "식은땀",
+        "hint": "당황"
+      },
+      {
+        "file": "mark-spark.png",
+        "title": "반짝임",
+        "hint": "음식 한입, 등장"
+      },
+      {
+        "file": "mark-anger.png",
+        "title": "울컥 표시",
+        "hint": "화남"
+      },
+      {
+        "file": "mark-sigh.png",
+        "title": "한숨 구름",
+        "hint": "체념"
+      },
+      {
+        "file": "mark-surprise.png",
+        "title": "느낌표 세트",
+        "hint": "놀람과 시선 강조"
+      },
+      {
+        "file": "mark-shake.png",
+        "title": "떨림 표시",
+        "hint": "덜덜, 부들부들"
+      },
+      {
+        "file": "mark-music.png",
+        "title": "음표",
+        "hint": "둠칫, 그루브"
+      },
+      {
+        "file": "mark-arrow.png",
+        "title": "굽은 이동 화살표",
+        "hint": "컷 전환과 방향"
+      },
+      {
+        "file": "mark-ellipsis.png",
+        "title": "정적 점 세 개",
+        "hint": "머뭇거림"
+      }
+    ]
+  },
+  {
+    "name": "이야기 소품",
+    "cards": [
+      {
+        "file": "prop-mic.png",
+        "title": "마이크",
+        "hint": "자기소개와 리뷰"
+      },
+      {
+        "file": "prop-tteok.png",
+        "title": "떡볶이 접시",
+        "hint": "소울푸드 편"
+      },
+      {
+        "file": "prop-book.png",
+        "title": "책 더미",
+        "hint": "사서 편"
+      },
+      {
+        "file": "prop-bag.png",
+        "title": "백팩",
+        "hint": "출퇴근, 여행"
+      },
+      {
+        "file": "prop-laptop.png",
+        "title": "노트북",
+        "hint": "회사, 작업 컷"
+      },
+      {
+        "file": "prop-phone.png",
+        "title": "휴대폰",
+        "hint": "연락, 생각 중"
+      },
+      {
+        "file": "prop-box.png",
+        "title": "이삿짐 상자",
+        "hint": "짐 줄이기, 이사"
+      },
+      {
+        "file": "prop-mat.png",
+        "title": "요가 매트",
+        "hint": "명상 컷"
+      }
+    ]
+  },
+  {
+    "name": "배경 · 장소와 분위기",
+    "cards": [
+      {
+        "file": "bg-room.png",
+        "title": "방과 침대",
+        "hint": "귀가 장면"
+      },
+      {
+        "file": "bg-subway.png",
+        "title": "지하철 출입문",
+        "hint": "출퇴근 컷"
+      },
+      {
+        "file": "bg-office.png",
+        "title": "책상과 창",
+        "hint": "일하는 컷"
+      },
+      {
+        "file": "bg-space.png",
+        "title": "별과 행성",
+        "hint": "우주의 계획, 상상"
+      },
+      {
+        "file": "bg-road.png",
+        "title": "갈림길",
+        "hint": "고민, 선택"
+      }
+    ]
+  },
+  {
+    "name": "몸 방향 참고 · 러프 실루엣",
+    "cards": [
+      {
+        "file": "body-front.png",
+        "title": "정면 서기",
+        "hint": "옷과 팔 위치 스케치"
+      },
+      {
+        "file": "body-side.png",
+        "title": "옆모습 서기",
+        "hint": "자세·옷 실루엣"
+      },
+      {
+        "file": "body-seated.png",
+        "title": "앉은 모습",
+        "hint": "책상과 인터뷰"
+      },
+      {
+        "file": "body-running.png",
+        "title": "뛰는 모습",
+        "hint": "전환·움직임 러프"
+      }
+    ]
+  }
+]

@@ -8,7 +8,7 @@ account: move
     <p class="eyebrow">move.a.bit · 필라테스와 움직임</p>
     <h1>무브어빗</h1>
     <p>어깨 릴스 대본과 필라테스 콘텐츠를 준비하는 공간이에요.</p>
-    <div class="downloads"><a href="#scripts">스크립트</a><a href="#references">로고 시안</a><a href="#plan">기획표</a></div>
+    <div class="downloads"><a href="#scripts">스크립트</a><a href="#neutral-comic">새 인스타툰 · 중립</a><a href="#references">로고·해부학 시안</a><a href="#plan">기획표</a></div>
   </div>
   <aside class="next">
     <p class="eyebrow">다음 릴스 · 첫 멘트</p>
@@ -20,15 +20,8 @@ account: move
 <section id="scripts" class="section">
   <p class="eyebrow">01 · 기존 대본</p>
   <h2>릴스 스크립트</h2>
-  <article class="script-card">
-    <h3>어깨 해부학 릴스 스크립트</h3>
-    <ul class="script-list">
-      <li><strong>어깨는 왜 아플까요?</strong><span>어깨 경험과 첫 수업을 담은 촬영용 초안</span></li>
-      <li><strong>전거근, 무슨 일을 할까?</strong><span>전거근 후속편 촬영용 초안</span></li>
-      <li><strong>어깨의 뼈·견갑대·근육·움직임</strong><span>해부학 릴스 구성과 화면 메모</span></li>
-    </ul>
-    <a class="button" href="https://docs.google.com/document/d/1uF7wEaPeNgUeF9Q7CD7GbUm5nzRL1VHhqBVjFWvDESI/edit?usp=drivesdk" target="_blank" rel="noopener">Google Docs에서 전체 대본 열기 ↗</a>
-  </article>
+  {% include move-scripts.html %}
+  <div class="downloads"><a href="https://docs.google.com/document/d/1uF7wEaPeNgUeF9Q7CD7GbUm5nzRL1VHhqBVjFWvDESI/edit?usp=drivesdk" target="_blank" rel="noopener">기존 Google Docs 자료 열기 ↗</a></div>
 </section>
 
 <section id="references" class="section">
@@ -42,6 +35,15 @@ account: move
           {% include reference-card.html %}
         {% endfor %}
       </div>
+  <h3>어깨 해부학 시안</h3>
+  <p>기존 그림 초안이에요. 영상에 쓰기 전에 그림 속 구조와 표기를 확인하세요.</p>
+  <div class="gallery">
+    {% assign diagrams = "shoulder-art|어깨 해부학 그림 모음|구조별 그림 구도 참고;shoulder-card|어깨 해부학 정보 카드|설명 카드 배치와 색상 참고" | split: ";" %}
+    {% for item in diagrams %}
+      {% assign row = item | split: "|" %}
+      {% include reference-card.html %}
+    {% endfor %}
+  </div>
 </section>
 
 <section id="plan" class="section plan">
