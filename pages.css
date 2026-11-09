@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light;
+  --ink: #1e2823;
+  --muted: #4f6057;
+  --accent: #17604b;
+  --border: #d9e2db;
+  --surface: #fff;
+  background: #f4f7f2;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  line-height: 1.55;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible { outline: 3px solid #2a8066; outline-offset: 3px; }
+.site-header { background: var(--surface); border-bottom: 1px solid var(--border); }
+.header-inner, nav, .downloads { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.header-inner { justify-content: space-between; min-height: 68px; padding-block: 12px; }
+.brand, nav a, .button, .downloads a { text-decoration: none; }
+.brand { color: var(--ink); display: flex; align-items: center; gap: 10px; }
+.brand strong { font-size: 24px; }
+.brand span { color: var(--muted); font-size: 14px; }
+nav a, .downloads a { font-weight: 700; padding: 6px 9px; border-radius: 7px; }
+nav a:hover, .downloads a:hover { background: #e4eee8; }
+.hero { margin-top: 28px; padding: clamp(22px, 4.5vw, 54px); background: #e3ede4; border: 1px solid var(--border); border-radius: 24px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: center; }
+.hero h1 { font-size: clamp(30px, 5vw, 54px); line-height: 1.12; letter-spacing: -.055em; }
+h1, h2, h3, h4, p { margin: 0; }
+h2 { font-size: clamp(23px, 3vw, 34px); line-height: 1.2; letter-spacing: -.035em; }
+p { color: var(--muted); }
+.hero p:not(.eyebrow), .section > p:not(.eyebrow) { margin-top: 10px; }
+.eyebrow { color: var(--accent); font-size: 13px; font-weight: 800; margin-bottom: 8px; }
+.button { display: inline-block; padding: 10px 15px; border-radius: 9px; color: #fff; background: var(--accent); margin-top: 18px; font-weight: 750; }
+.next { padding: 20px; background: #ffffffc9; border: 1px solid var(--border); border-radius: 16px; }
+.next h2 { font-size: clamp(20px, 2.4vw, 27px); }
+.next a { display: inline-block; margin-top: 12px; font-weight: 700; }
+.section { margin-top: 42px; scroll-margin-top: 16px; }
+.section > h3 { margin: 22px 0 9px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 232px), 1fr)); gap: 14px; margin-top: 12px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; overflow: hidden; }
+.preview { display: block; background: #ecefea; }
+.preview img { display: block; width: 100%; height: 220px; object-fit: contain; }
+.effect-preview { background-color: #fbfbfb; background-image: conic-gradient(#eef0ec 25%, #fbfbfb 0 50%, #eef0ec 0 75%, #fbfbfb 0); background-size: 24px 24px; }
+.effect-preview img { height: 192px; }
+.card-body { padding: 14px; }
+.card-body h3, .card-body h4 { font-size: 16px; }
+.card-body p { margin-top: 4px; font-size: 14px; }
+.downloads { margin-top: 8px; gap: 3px; }
+.downloads a { font-size: 14px; }
+details { margin-top: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; scroll-margin-top: 12px; }
+summary { cursor: pointer; padding: 14px 18px; font-weight: 800; }
+.plan-body { padding: 0 18px 18px; overflow-wrap: anywhere; }
+.plan-body h3 { margin-top: 18px; }
+.plan-body p { margin-top: 10px; }
+.plan-body table { width: 100%; border-collapse: collapse; margin-top: 9px; }
+.plan-body th, .plan-body td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+.plan-body th { background: #edf3ed; }
+footer { color: var(--muted); font-size: 13px; padding-block: 32px; }
+@media (max-width: 630px) {
+  .wrap { width: calc(100% - 28px); }
+  .header-inner { gap: 4px; }
+  nav { gap: 3px; font-size: 14px; }
+  nav a { padding-left: 0; margin-right: 8px; }
+  .hero { grid-template-columns: 1fr; gap: 16px; margin-top: 18px; }
+  .section { margin-top: 32px; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .preview img { height: 156px; }
+  .card-body { padding: 9px; }
+  .downloads a { padding: 5px 3px; }
+  .plan-body { padding-inline: 9px; font-size: 14px; }
+  .plan-body th, .plan-body td { padding: 4px; }
+}

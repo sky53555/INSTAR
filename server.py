@@ -155,7 +155,7 @@ class Handler(BaseHTTPRequestHandler):
             path = DATA / 'images' / self.path.rsplit('/', 1)[-1]
             if path.is_file():
                 return self.reply(200, path.read_bytes(), {'png': 'image/png', 'jpg': 'image/jpeg', 'webp': 'image/webp'}[path.suffix[1:]])
-        files = {'/': ('index.html', 'text/html; charset=utf-8'), '/app.js': ('app.js', 'text/javascript; charset=utf-8'), '/style.css': ('style.css', 'text/css; charset=utf-8')}
+        files = {'/': ('_includes/workspace.html', 'text/html; charset=utf-8'), '/app.js': ('app.js', 'text/javascript; charset=utf-8'), '/style.css': ('style.css', 'text/css; charset=utf-8')}
         if self.path in files:
             name, mime = files[self.path]
             return self.reply(200, (ROOT / name).read_bytes(), mime)
@@ -249,3 +249,4 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', '8000'))
     print(f'Content Studio listening on {address}:{port}', flush=True)
     ThreadingHTTPServer((address, port), Handler).serve_forever()
+

@@ -1,0 +1,8 @@
+{% assign asset = row[0] | prepend: "./assets/references/" | append: ".jpg" %}
+<article class="card">
+  <a class="preview" href="{{ asset }}" target="_blank" rel="noopener" aria-label="{{ row[1] }} 크게 보기"><img src="{{ asset }}" alt="{{ row[1] }}" loading="lazy"></a>
+  <div class="card-body">
+    <h4>{{ row[1] }}</h4><p>{{ row[2] }}</p>
+    <div class="downloads"><a href="{{ asset }}" download>JPG 다운로드 ↓</a></div>
+  </div>
+</article>
