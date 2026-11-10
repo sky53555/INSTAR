@@ -112,3 +112,20 @@ nav a[aria-current="page"] { background: #e4eee8; }
 .production-card .downloads .button { margin: 0; padding: 8px 12px; }
 .production-card .downloads .button:hover { background: #0f4b3a; }
 .episode:target { border-color: var(--accent); }
+
+/* Carousel previews keep the complete portrait in a compact, clickable card. */
+.post-gallery {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 220px));
+}
+.post-gallery .card > a { display: block; padding: 8px; }
+.post-gallery .card > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 265px;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+}
+@media (max-width: 580px) {
+  .post-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

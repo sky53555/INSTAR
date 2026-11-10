@@ -8,7 +8,7 @@ account: life
     <p class="eyebrow">일상 인스타툰</p>
     <h1>우당탕 라이프</h1>
     <p>우당탕의 주인공은 모든 에피소드에서 둥근 안경, 머리 안쪽의 가르마, 단순한 몸과 연필선을 유지해요. 표정·자세·소품으로 장면을 구분해요.</p>
-    <div class="downloads"><a href="#production">제작 순서</a><a href="#scripts">전체 대본</a><a href="#resignation-post">퇴사편 게시용 이미지</a><a href="#circle-square">새 만화 · 동그라미</a><a href="#references">이전 시안</a><a href="#toolkit">제작 소재</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
+    <div class="downloads"><a href="#production">제작 순서</a><a href="#scripts">전체 대본</a><a href="#resignation-post">퇴사편 게시용 이미지</a><a href="#circle-square">새 만화 · 동그라미</a><a href="#references">시안</a><a href="#toolkit">제작 소재</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
   </div>
 </section>
 
@@ -36,7 +36,7 @@ account: life
   <p class="eyebrow">게시용 · 01–07</p>
   <h2 id="resignation-post-title">또! 또또또…? 퇴사?!</h2>
   <p>아래 일곱 장을 번호대로 저장하면 돼요. 대사와 효과음이 들어간 1080 × 1350 이미지예요.</p>
-  <div class="gallery">
+  <div class="gallery post-gallery">
     <article class="card"><a href="./assets/posts/resignation-1.jpg"><img src="./assets/posts/resignation-1.jpg" alt="1컷 명상 중 결심. 퇴사해야지." loading="lazy" width="1080" height="1350"></a><div class="card-body"><h3>1 · 명상 중 결심</h3><div class="downloads"><a href="./assets/posts/resignation-1.jpg" download>게시용 JPG ↓</a></div></div></article>
     <article class="card"><a href="./assets/posts/resignation-2.jpg"><img src="./assets/posts/resignation-2.jpg" alt="2컷 밀려드는 걱정. 돈은? 이 나이에? 그다음은? 으악!" loading="lazy" width="1080" height="1350"></a><div class="card-body"><h3>2 · 밀려드는 걱정</h3><div class="downloads"><a href="./assets/posts/resignation-2.jpg" download>게시용 JPG ↓</a></div></div></article>
     <article class="card"><a href="./assets/posts/resignation-3.jpg"><img src="./assets/posts/resignation-3.jpg" alt="3컷 나를 인정하기. 인정하자. 이게 나라는 걸." loading="lazy" width="1080" height="1350"></a><div class="card-body"><h3>3 · 나를 인정하기</h3><div class="downloads"><a href="./assets/posts/resignation-3.jpg" download>게시용 JPG ↓</a></div></div></article>
@@ -56,17 +56,11 @@ account: life
 </section>
 
 <section id="references" class="section">
-  <p class="eyebrow">02 · 기존 시안</p>
-  <h2>이전 시안 보관함</h2><details class="toolkit-group"><summary>이전 그림과 콘티 펼치기</summary><p>현재 캐릭터 포즈는 아래 제작 라이브러리에서 받을 수 있어요. 이 모음에는 이전 캐릭터와 콘티가 들어 있어요. 현재 게시용 컷은 각 에피소드에서 확인할 수 있어요.</p>
-  <p>이미지를 누르면 크게 볼 수 있어요. 그림을 그릴 때 옆에 띄워두거나 JPG로 저장하세요.</p>
-      <div class="gallery">
-        {% assign drawings = "character-poses|캐릭터 포즈 시트|머리 부여잡기, 마이크 소개, 춤, 허리 숙여 인사;four-scenes|네 장면 만화|명상, 소개, 춤, 작별 인사를 한 장에;meditation|명상 중 폭발하는 마음|평온한 몸과 폭발하는 머릿속의 대비;pose-bible|툰 포즈 바이블|표정과 자세 모음, 하단에 기존 효과선과 기호 예시;expressions|캐릭터 표정·동작 사전|얼굴, 전신, 손과 반응의 기존 참고 시안;pose-sheet|마이크·춤·인사 시트|기존 안경 캐릭터의 동작 모음;storyboard-study|표정과 컷 연출 참고|폭발 장면과 표정 연구;resignation-storyboard|퇴사편 기존 콘티 시안|구도 참고용 기존 그림" | split: ";" %}
-        {% for item in drawings %}
-          {% assign row = item | split: "|" %}
-          {% include reference-card.html %}
-        {% endfor %}
-      </div>
-</details></section>
+  <p class="eyebrow">02 · 그리기 참고</p>
+  <h2>시안</h2>
+  <p>둥근 안경과 가르마 캐릭터로 그린 작품 시안과, 컷에 얹어 쓸 투명 포즈를 여기서 골라보세요.</p>
+  <div class="downloads"><a href="#resignation-post">퇴사편 게시용 컷</a><a href="#circle-square">동그라미 편 콘티</a><a href="#toolkit">캐릭터 포즈 · 투명 PNG</a></div>
+</section>
 
 {% include comic-toolkit.html %}
 
