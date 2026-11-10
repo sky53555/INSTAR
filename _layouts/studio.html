@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} · 모아</title>
+  <title>{{ page.title }} · 인스타 콘텐츠</title>
   <link rel="stylesheet" href="./pages.css">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="./"><strong>모아</strong><span>인스타 콘텐츠 작업실</span></a>
+      <a class="brand" href="./"><strong>인스타 콘텐츠</strong><span>계정 목록</span></a>
       <nav aria-label="계정 선택">
         <a href="./udangtang.html"{% if page.account == "life" %} aria-current="page"{% endif %}>우당탕 라이프</a>
         <a href="./move-a-bit.html"{% if page.account == "move" %} aria-current="page"{% endif %}>무브어빗</a>
@@ -19,6 +19,6 @@
   <main class="wrap">
 {{ content }}
   </main>
-  <footer class="wrap">모아 · 인스타 콘텐츠 작업실</footer>
+  <footer class="wrap">인스타 콘텐츠 작업실</footer>
 </body>
 </html>
