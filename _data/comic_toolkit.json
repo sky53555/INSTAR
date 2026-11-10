@@ -41,6 +41,26 @@
         "file": "pose-bow.png",
         "title": "허리 숙여 인사",
         "hint": "마지막 컷"
+      },
+      {
+        "file": "pose-meditate.png",
+        "title": "조용히 명상",
+        "hint": "정적과 생각의 시작"
+      },
+      {
+        "file": "pose-overwhelmed.png",
+        "title": "머리를 쥐고 으악",
+        "hint": "걱정과 생각이 터질 때"
+      },
+      {
+        "file": "pose-accept.png",
+        "title": "두 팔 벌려 받아들이기",
+        "hint": "안도와 자기 인정"
+      },
+      {
+        "file": "pose-think.png",
+        "title": "턱 괴고 생각하기",
+        "hint": "잠깐 멈춰 떠올리기"
       }
     ]
   },
@@ -205,7 +225,7 @@
     ]
   },
   {
-    "name": "몸 방향 참고 · 러프 실루엣",
+    "name": "캐릭터 기본 자세 · 정면과 옆면",
     "cards": [
       {
         "file": "body-front.png",
