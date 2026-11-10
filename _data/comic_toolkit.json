@@ -150,6 +150,52 @@
     ]
   },
   {
+    "id": "story-effects",
+    "name": "컷 연출 효과 · 투명 오버레이",
+    "cards": [
+      {
+        "file": "fx-worry-tangle.png",
+        "title": "엉킨 생각",
+        "hint": "고민이 몰릴 때 머리 옆에 크기를 달리해 배치"
+      },
+      {
+        "file": "fx-thought-trail.png",
+        "title": "떠오른 생각",
+        "hint": "생각 구름 안에 짧은 문장을 얹고 작은 방울을 얼굴 쪽으로"
+      },
+      {
+        "file": "fx-throw-arc.png",
+        "title": "던지는 궤적",
+        "hint": "종이공이나 작은 소품 뒤에 돌려서 배치"
+      },
+      {
+        "file": "fx-crumple-lines.png",
+        "title": "꾸깃 효과선",
+        "hint": "가운데 빈 곳에 종이나 손을 겹치기"
+      },
+      {
+        "file": "fx-side-glance.png",
+        "title": "슬쩍 시선선",
+        "hint": "눈 옆에 작게 두고 보는 방향에 맞춰 뒤집기"
+      },
+      {
+        "file": "fx-relief-breath.png",
+        "title": "후, 안도",
+        "hint": "긴장이 풀리는 컷에서 입가나 어깨 옆에 작게"
+      },
+      {
+        "file": "fx-small-impact.png",
+        "title": "툭, 닿는 순간",
+        "hint": "책상·바닥에 소품이 닿는 지점에 배치"
+      },
+      {
+        "file": "fx-rebound-lines.png",
+        "title": "통통, 튕김",
+        "hint": "물건이 모서리에 닿아 방향이 바뀌는 컷에 배치"
+      }
+    ]
+  },
+  {
     "name": "이야기 소품",
     "cards": [
       {
