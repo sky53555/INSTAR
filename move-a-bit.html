@@ -7,25 +7,25 @@ account: move
   <div>
     <p class="eyebrow">move.a.bit · 필라테스와 움직임</p>
     <h1>무브어빗</h1>
-    <p>어깨 릴스 대본과 필라테스 콘텐츠를 준비하는 공간이에요.</p>
-    <div class="downloads"><a href="#scripts">스크립트</a><a href="#neutral-comic">새 인스타툰 · 중립</a><a href="#references">로고·해부학 시안</a><a href="#plan">기획표</a></div>
+    <p>촬영할 릴스 대본, 인스타툰 초안, 제작에 쓸 이미지를 찾아보세요.</p>
+    <div class="downloads"><a href="#scripts">릴스 대본</a><a href="#neutral-comic">인스타툰 초안</a><a href="#references">이미지 자료</a><a href="#plan">후속 아이디어</a></div>
   </div>
   <aside class="next">
-    <p class="eyebrow">다음 릴스 · 첫 멘트</p>
+    <p class="eyebrow">촬영 준비 · 어깨 릴스</p>
     <h2>왜 이렇게 어깨 아픈 사람이 많을까요?</h2>
-    <a href="#scripts">기존 어깨 대본 보기 →</a>
+    <a href="#scripts">촬영 대본 보기 →</a>
   </aside>
 </section>
 
 <section id="scripts" class="section">
-  <p class="eyebrow">01 · 기존 대본</p>
-  <h2>릴스 스크립트</h2>
+  <p class="eyebrow">01 · 제작 중인 콘텐츠</p>
+  <h2>릴스 대본과 인스타툰 초안</h2>
   {% include move-scripts.html %}
   <div class="downloads"><a href="https://docs.google.com/document/d/1uF7wEaPeNgUeF9Q7CD7GbUm5nzRL1VHhqBVjFWvDESI/edit?usp=drivesdk" target="_blank" rel="noopener">기존 Google Docs 자료 열기 ↗</a></div>
 </section>
 
 <section id="references" class="section">
-  <p class="eyebrow">02 · 기존 시안</p>
+  <p class="eyebrow">02 · 이미지 자료</p>
   <h2>무브어빗 로고</h2>
   <p>이미지를 눌러 크게 보거나 JPG로 다운로드하세요.</p>
       <div class="gallery">
@@ -47,9 +47,9 @@ account: move
 </section>
 
 <section id="plan" class="section plan">
-  <p class="eyebrow">03 · 게시물 기획</p>
-  <h2>무브어빗 기획표</h2>
+  <p class="eyebrow">03 · 기획 메모</p>
+  <h2>후속 아이디어와 촬영 메모</h2>
       {% capture content_plan %}{% include_relative CONTENT-PLAN.md %}{% endcapture %}
       {% assign plan_sections = content_plan | split: "## move.a.bit" %}
-  <div class="plan-body">{{ plan_sections[1] | markdownify }}</div>
+  <details class="episode"><summary>기존 기획표 펼치기</summary><div class="episode-body plan-body">{{ plan_sections[1] | markdownify }}</div></details>
 </section>
