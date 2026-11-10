@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} · 인스타 콘텐츠</title>
+  <title>{{ page.title }}{% if page.account %} · 인스타{% endif %}</title>
   <link rel="stylesheet" href="./pages.css">
 </head>
 <body>
@@ -20,5 +20,17 @@
 {{ content }}
   </main>
   <footer class="wrap">인스타 콘텐츠 작업실</footer>
+  <script>
+    function revealLinkedDraft() {
+      const draft = document.getElementById(location.hash.slice(1));
+      if (draft instanceof HTMLDetailsElement && draft.classList.contains('episode') && !draft.open) {
+        draft.open = true;
+        draft.scrollIntoView();
+      }
+    }
+
+    revealLinkedDraft();
+    window.addEventListener('hashchange', revealLinkedDraft);
+  </script>
 </body>
 </html>

@@ -8,7 +8,27 @@ account: life
     <p class="eyebrow">일상 인스타툰</p>
     <h1>우당탕 라이프</h1>
     <p>컷별 대본을 보면서 캐릭터와 강조선을 골라 쓸 수 있어요.</p>
-    <div class="downloads"><a href="#scripts">스크립트</a><a href="#resignation">퇴사편 바로 보기</a><a href="#circle-square">새 만화 · 동그라미</a><a href="#references">그림 시안</a><a href="#toolkit">제작 소재</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
+    <div class="downloads"><a href="#production">제작 순서</a><a href="#scripts">전체 대본</a><a href="#resignation">퇴사편 바로 보기</a><a href="#circle-square">새 만화 · 동그라미</a><a href="#references">그림 시안</a><a href="#toolkit">제작 소재</a><a href="#effects">컷 강조선</a><a href="#plan">기획표</a></div>
+  </div>
+</section>
+
+<section id="production" class="section" aria-labelledby="production-title">
+  <p class="eyebrow">제작 순서</p>
+  <h2 id="production-title">어떤 게시물부터 만들까요?</h2>
+  <p>퇴사편의 원래 7컷과 다음 작업 후보인 동그라미 편을 각각 열어볼 수 있어요.</p>
+  <div class="production-grid">
+    <article class="card production-card">
+      <p class="eyebrow">인스타툰 · 7컷 구성</p>
+      <h3>또! 또또또…? 퇴사?!</h3>
+      <p>제목만 넣는 표지와 명상으로 시작하는 본문을 먼저 배치하세요. 폭발 컷에 쓸 포즈와 효과를 아래에서 바로 고를 수 있어요.</p>
+      <div class="downloads"><a class="button" href="#resignation">원래 7컷 대본</a><a href="./assets/references/resignation-storyboard.jpg">기존 콘티</a><a href="#toolkit">말풍선·폭발 소재</a></div>
+    </article>
+    <article class="card production-card">
+      <p class="eyebrow">인스타툰 · 6컷 시안</p>
+      <h3>내가 그린 동그라미</h3>
+      <p>글자 없는 6컷 시안을 열고, 대사는 대본과 나란히 보면서 얹으세요.</p>
+      <div class="downloads"><a class="button" href="#circle-square">6컷 대본</a><a href="./assets/references/circle-square-storyboard.jpg">그림 시안</a></div>
+    </article>
   </div>
 </section>
 
@@ -63,5 +83,5 @@ account: life
       {% capture content_plan %}{% include_relative CONTENT-PLAN.md %}{% endcapture %}
       {% assign plan_sections = content_plan | split: "## move.a.bit" %}
       {% assign life_plan = plan_sections[0] | split: "## 우당탕 라이프" | last %}
-  <div class="plan-body">{{ life_plan | markdownify }}</div>
+  <details class="episode"><summary>기존 게시 순서와 연재 소재 펼치기</summary><div class="plan-body">{{ life_plan | markdownify }}</div></details>
 </section>

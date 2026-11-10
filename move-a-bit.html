@@ -8,13 +8,33 @@ account: move
     <p class="eyebrow">move.a.bit · 필라테스와 움직임</p>
     <h1>무브어빗</h1>
     <p>촬영할 릴스 대본, 인스타툰 초안, 제작에 쓸 이미지를 찾아보세요.</p>
-    <div class="downloads"><a href="#scripts">릴스 대본</a><a href="#neutral-comic">인스타툰 초안</a><a href="#references">이미지 자료</a><a href="#plan">후속 아이디어</a></div>
+    <div class="downloads"><a href="#production">제작 순서</a><a href="#scripts">릴스 대본</a><a href="#neutral-comic">인스타툰 초안</a><a href="#references">이미지 자료</a><a href="#plan">후속 아이디어</a></div>
   </div>
   <aside class="next">
     <p class="eyebrow">촬영 준비 · 어깨 릴스</p>
     <h2>왜 이렇게 어깨 아픈 사람이 많을까요?</h2>
-    <a href="#scripts">촬영 대본 보기 →</a>
+    <a href="#shoulder-reel">촬영 대본 보기 →</a>
   </aside>
+</section>
+
+<section id="production" class="section" aria-labelledby="production-title">
+  <p class="eyebrow">제작 순서</p>
+  <h2 id="production-title">어떤 게시물부터 만들까요?</h2>
+  <p>어깨 릴스를 먼저 촬영하고, 중립 인스타툰은 그림과 대사를 함께 다듬을 수 있어요.</p>
+  <div class="production-grid">
+    <article class="card production-card">
+      <p class="eyebrow">릴스 · 촬영 초안</p>
+      <h3>왜 이렇게 어깨 아픈 사람이 많을까요?</h3>
+      <p>첫 질문을 찍고, 직접 겪은 장면과 수업에서 보여줄 동작을 하나씩 고르세요.</p>
+      <div class="downloads"><a class="button" href="#shoulder-reel">대본 열기</a><a href="#shoulder-artwork">어깨 그림 시안</a></div>
+    </article>
+    <article class="card production-card">
+      <p class="eyebrow">인스타툰 · 4컷 초안</p>
+      <h3>중립 찾았는데요, 또 헷갈려요</h3>
+      <p>컷별 대사를 확인하고 글자 없는 표지에 제목을 얹으세요.</p>
+      <div class="downloads"><a class="button" href="#neutral-comic">4컷 대본</a><a href="./assets/references/neutral-cover.jpg">표지 시안</a></div>
+    </article>
+  </div>
 </section>
 
 <section id="scripts" class="section">
@@ -35,7 +55,7 @@ account: move
           {% include reference-card.html %}
         {% endfor %}
       </div>
-  <h3>어깨 해부학 시안</h3>
+  <h3 id="shoulder-artwork">어깨 해부학 시안</h3>
   <p>기존 그림 초안이에요. 영상에 쓰기 전에 그림 속 구조와 표기를 확인하세요.</p>
   <div class="gallery">
     {% assign diagrams = "shoulder-art|어깨 해부학 그림 모음|구조별 그림 구도 참고;shoulder-card|어깨 해부학 정보 카드|설명 카드 배치와 색상 참고" | split: ";" %}
