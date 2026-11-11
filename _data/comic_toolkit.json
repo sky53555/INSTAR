@@ -61,6 +61,56 @@
         "file": "pose-think.png",
         "title": "턱 괴고 생각하기",
         "hint": "잠깐 멈춰 떠올리기"
+      },
+      {
+        "file": "pose-dance-diagonal.png",
+        "title": "대각선으로 팔 뻗으며 춤추기",
+        "hint": "양발을 넓게 디딘 춤"
+      },
+      {
+        "file": "pose-dance-knee.png",
+        "title": "한쪽 무릎 들며 춤추기",
+        "hint": "팔과 무릎을 들어 올린 춤"
+      },
+      {
+        "file": "pose-back.png",
+        "title": "뒤돌아 서기",
+        "hint": "등을 보이는 장면"
+      },
+      {
+        "file": "pose-three-quarter.png",
+        "title": "비스듬히 서기",
+        "hint": "정면과 옆면 사이"
+      },
+      {
+        "file": "pose-walking.png",
+        "title": "천천히 걷기",
+        "hint": "일상 이동"
+      },
+      {
+        "file": "pose-sleeping.png",
+        "title": "옆으로 누워 자기",
+        "hint": "휴식 장면"
+      },
+      {
+        "file": "pose-phone.png",
+        "title": "앉아서 휴대폰 보기",
+        "hint": "메시지 확인"
+      },
+      {
+        "file": "pose-laptop.png",
+        "title": "노트북으로 작업하기",
+        "hint": "책상과 직장 장면"
+      },
+      {
+        "file": "pose-crying.png",
+        "title": "눈물 닦기",
+        "hint": "슬픈 표정"
+      },
+      {
+        "file": "pose-peek.png",
+        "title": "모서리에서 빼꼼",
+        "hint": "숨어서 살피는 장면"
       }
     ]
   },
